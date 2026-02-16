@@ -1,0 +1,37 @@
+repositories:
+  platform-iac:
+    description: "Terraform platform repo"
+    visibility: "private"
+    gitignore_template: "Terraform"
+  demo-app:
+    description: "Demo application repo"
+    visibility: "private"
+    gitignore_template: "Go"
+
+repo_collaborators:
+  demo-app:
+    castramage: admin
+
+teams:
+  devops:
+    description: "DevOps team"
+    privacy: "closed"
+  backend:
+    description: "Backend team"
+    privacy: "closed"
+
+manage_team_membership: true
+
+team_members:
+  devops:
+    castramage: maintainer
+  backend:
+    castramage: member
+
+team_repo_permissions:
+  platform-iac:
+    devops: admin
+    backend: pull
+  demo-app:
+    backend: push
+    devops: maintain

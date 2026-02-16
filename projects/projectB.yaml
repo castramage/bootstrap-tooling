@@ -1,0 +1,20 @@
+repositories:
+  projectb-iac:
+    description: "IaC repo for ProjectB"
+    visibility: "private"
+    gitignore_template: "Terraform"
+
+teams:
+  projectb-owners:
+    description: "Owners ProjectB"
+    privacy: "closed"
+
+manage_team_membership: true
+
+team_members:
+  projectb-owners:
+    castramage: maintainer
+
+team_repo_permissions:
+  projectb-iac:
+    projectb-owners: admin
